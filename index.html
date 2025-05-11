@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <button onclick="showPage('classic')">Classic Game</button>
+      <button onclick="showPage('random')">Randomizer</button>
+    </div>
+  </div>
+
+  <!-- CLASSIC GAME PAGE -->
+  <div id="classic" class="page">
+    <h2>Choose Your Weapon</h2>
+    <div class="choices">
+      <div class="choice" onclick="play('rock')">
+        <div class="circle">
+          <img src="assets/rock.png" alt="Rock">
+        </div>
+        <div class="label">Rock</div>
+      </div>
+      <div class="choice" onclick="play('paper')">
+        <div class="circle">
+          <img src="assets/paper.png" alt="Paper">
+        </div>
+        <div class="label">Paper</div>
+      </div>
+      <div class="choice" onclick="play('scissors')">
+        <div class="circle">
+          <img src="assets/scissors.png" alt="Scissors">
+        </div>
+        <div class="label">Scissors</div>
+      </div>
+    </div>
+    <button onclick="showPage('home')">Back</button>
+  </div>
+
+  <!-- RANDOMIZER PAGE -->
+  <div id="random" class="page">
+    <h2>Randomizer Mode</h2>
+    <button onclick="randomPlay()">Play Randomly</button>
+    <div id="random-result"></div>
+    <button onclick="showPage('home')">Back</button>
+  </div>
+
+  <!-- BATTLE RESULT PAGE -->
+  <div id="battle" class="page">
+    <h2>Battle Result</h2>
+    <div class="choices">
+      <div class="choice">
+        <div class="circle">
+          <img id="player-img" src="" alt="Player Choice">
+        </div>
+        <div class="label" id="player-label"></div>
+      </div>
+
+      <div style="font-size: 40px; align-self: center;">VS</div>
+
+      <div class="choice">
+        <div class="circle">
+          <img id="computer-img" src="" alt="Computer Choice">
+        </div>
+        <div class="label" id="computer-label"></div>
+      </div>
+    </div>
+
+    <div id="battle-result" style="margin-top: 30px; font-size: 22px;"></div>
+    <button onclick="showPage('home')">Back to Home</button>
+  </div>
+
+</body>
+</html>
